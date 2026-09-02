@@ -6,8 +6,15 @@ on:
 
 env:
   IMAGE_REGISTRY_URL: ghcr.io
-  DOCKER_IMAGE_NAME: skills-deploy-to-azure
-  AZURE_WEBAPP_NAME: Seif-Bedair-ttt-app
+
+  ###############################################
+  ### Replace <username> with GitHub username ###
+  ###############################################
+  DOCKER_IMAGE_NAME: <username>-azure-ttt
+  AZURE_WEBAPP_NAME: <username>-ttt-app
+  ###############################################
+
+
 jobs:
   build:
     if: contains(github.event.pull_request.labels.*.name, 'stage')
